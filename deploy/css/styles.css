@@ -352,8 +352,8 @@ template {
 /* =============
     Base
 ============= */
-body {
-  background-color: red;
+#some-box {
+  background-color: purple;
 }
 
 /* =============
@@ -373,4 +373,27 @@ body {
 ============= */
 /* =============
     Footer
+============= */
+/* =============
+    Hero-2
+============= */
+#hero-2 {
+  background-color: aqua;
+}
+
+/* =============
+    Hero
+============= */
+#hero ul li {
+  background-color: red;
+}
+
+/* =============
+   New
+============= */
+/* =============
+    Planning
+============= */
+/* =============
+    Search
 ============= */

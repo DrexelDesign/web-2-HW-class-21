@@ -399,6 +399,9 @@ header > div {
   grid-area: search;
 }
 
+/* =============
+    Hero
+============= */
 #hero img {
   width: 100%;
 }
@@ -409,4 +412,17 @@ header > div {
 }
 #hero ul li a {
   grid-area: hero-content;
+}
+
+/* =============
+    Planning
+============= */
+#planning ul li {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". planning-content .";
+}
+#planning ul li > div {
+  grid-area: planning-content;
+  border: 1px solid red;
 }

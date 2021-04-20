@@ -426,3 +426,16 @@ header > div {
   grid-area: planning-content;
   border: 1px solid red;
 }
+
+/* =============
+    Hero 2
+============= */
+#hero-2 ul {
+  display: grid;
+}
+#hero-2 ul li img {
+  width: 100%;
+}
+#hero-2 ul #h2-3 {
+  display: none;
+}

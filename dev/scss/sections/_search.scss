@@ -1,13 +1,13 @@
 /* =============
-    Header
+    Search
 ============= */
-header{
+#search{
     display: grid;
     grid-template-columns: 16px auto 16px;
-    grid-template-areas: ". header .";
+    grid-template-areas: ". search .";
 
     >div{
         // border: 1px solid red;
-        grid-area: header;
+        grid-area: search;
     }
 }

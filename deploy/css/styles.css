@@ -504,11 +504,43 @@ footer > div {
 #hero-2 ul {
   display: grid;
 }
+@media (min-width: 768px) {
+  #hero-2 ul {
+    grid-template-columns: 50% auto;
+  }
+}
+@media (min-width: 1024px) {
+  #hero-2 ul {
+    grid-template-columns: 60% auto;
+  }
+}
+@media (min-width: 1200px) {
+  #hero-2 ul {
+    grid-template-columns: 65% auto;
+    grid-template-areas: "h2-1 h2-2" "h2-1 h2-3";
+  }
+}
 #hero-2 ul li img {
   width: 100%;
 }
+@media (min-width: 1200px) {
+  #hero-2 ul #h2-1 {
+    grid-area: h2-1;
+  }
+}
+@media (min-width: 1200px) {
+  #hero-2 ul #h2-2 {
+    grid-area: h2-2;
+  }
+}
 #hero-2 ul #h2-3 {
   display: none;
+}
+@media (min-width: 1200px) {
+  #hero-2 ul #h2-3 {
+    display: list-item;
+    grid-area: h2-3;
+  }
 }
 
 /* =============

@@ -5,9 +5,10 @@ header{
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". header .";
+    background-color: $blueDark;
 
     >div{
-        // border: 1px solid red;
+        
         grid-area: header;
     }
 }

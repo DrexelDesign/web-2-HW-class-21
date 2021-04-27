@@ -14,7 +14,7 @@ footer {
 
     >div {
         grid-area: footer;
-        border: 1px solid red;
+        // border: 1px solid red;
         @include md{
             display: grid;
             grid-template-columns: 50% auto;
@@ -30,7 +30,15 @@ footer {
         }
 
         section{
-            border: 1px solid thistle;
+            // border: 1px solid thistle;
+
+            ul{
+                li{
+                    i{
+                        color: $yellow;
+                    }
+                }
+            }
         }
 
         #locations{

@@ -52,6 +52,10 @@
     
                     >div {
                         grid-area: new-content;
+
+                        button{
+                            background-color: $yellow;
+                        }
                     }
                 }
             }

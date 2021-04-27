@@ -402,7 +402,6 @@ footer {
 }
 footer > div {
   grid-area: footer;
-  border: 1px solid red;
 }
 @media (min-width: 768px) {
   footer > div {
@@ -417,8 +416,8 @@ footer > div {
     grid-template-areas: "locations sing-up follow";
   }
 }
-footer > div section {
-  border: 1px solid thistle;
+footer > div section ul li i {
+  color: #FFD205;
 }
 @media (min-width: 768px) {
   footer > div #locations {
@@ -636,6 +635,9 @@ footer > div section {
 }
 #new > div ul li section > div {
   grid-area: new-content;
+}
+#new > div ul li section > div button {
+  background-color: #FFD205;
 }
 @media (min-width: 768px) {
   #new > div ul #n1 {

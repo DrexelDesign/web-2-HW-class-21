@@ -405,9 +405,18 @@ footer > div {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". search .";
+  background-color: #F8F9FA;
+}
+@media (min-width: 1200px) {
+  #search {
+    grid-template-columns: auto 1000px auto;
+  }
 }
 #search > div {
   grid-area: search;
+}
+#search > div form button {
+  background-color: #FFD205;
 }
 
 /* =============
@@ -416,13 +425,41 @@ footer > div {
 #hero img {
   width: 100%;
 }
+@media (min-width: 768px) {
+  #hero ul {
+    display: grid;
+    grid-template-columns: 40% auto;
+  }
+}
+@media (min-width: 1024px) {
+  #hero ul {
+    grid-template-columns: 50% auto;
+  }
+}
 #hero ul li {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". hero-content .";
 }
+@media (min-width: 1200px) {
+  #hero ul li {
+    grid-template-columns: auto 480px 16px;
+  }
+}
 #hero ul li a {
   grid-area: hero-content;
+  border: 1px solid red;
+}
+#hero ul #hero-sub-1 {
+  background-color: #E2BA06;
+}
+#hero ul #hero-sub-2 {
+  background-color: #FFD205;
+}
+@media (min-width: 1200px) {
+  #hero ul #hero-sub-2 {
+    grid-template-columns: 16px 480px auto;
+  }
 }
 
 /* =============

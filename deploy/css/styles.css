@@ -389,13 +389,51 @@ header > div {
     Footer
 ============= */
 footer {
+  background-color: #2A3036;
+  color: #fff;
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". footer .";
 }
+@media (min-width: 1200px) {
+  footer {
+    grid-template-columns: auto 1200px auto;
+  }
+}
 footer > div {
   grid-area: footer;
   border: 1px solid red;
+}
+@media (min-width: 768px) {
+  footer > div {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: "locations sing-up" "locations follow";
+  }
+}
+@media (min-width: 1200px) {
+  footer > div {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "locations sing-up follow";
+  }
+}
+footer > div section {
+  border: 1px solid thistle;
+}
+@media (min-width: 768px) {
+  footer > div #locations {
+    grid-area: locations;
+  }
+}
+@media (min-width: 768px) {
+  footer > div #sign-up {
+    grid-area: sing-up;
+  }
+}
+@media (min-width: 768px) {
+  footer > div #follow {
+    grid-area: follow;
+  }
 }
 
 /* =============
@@ -501,6 +539,13 @@ footer > div {
 /* =============
     Hero 2
 ============= */
+@media (min-width: 1200px) {
+  #hero-2 {
+    display: grid;
+    grid-template-columns: auto 1200px auto;
+    grid-template-areas: ". hero-2 .";
+  }
+}
 #hero-2 ul {
   display: grid;
 }
@@ -516,6 +561,7 @@ footer > div {
 }
 @media (min-width: 1200px) {
   #hero-2 ul {
+    grid-area: hero-2;
     grid-template-columns: 65% auto;
     grid-template-areas: "h2-1 h2-2" "h2-1 h2-3";
   }
@@ -546,14 +592,73 @@ footer > div {
 /* =============
     New
 ============= */
-#new ul li img {
+@media (min-width: 768px) {
+  #new {
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". new .";
+  }
+}
+@media (min-width: 1200px) {
+  #new {
+    grid-template-columns: auto 1200px auto;
+  }
+}
+@media (min-width: 768px) {
+  #new > div {
+    grid-area: new;
+  }
+}
+@media (min-width: 768px) {
+  #new > div ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "n1 n1 n2 n2" "n3 n3 n4 n4" ". n5 n5 .";
+    gap: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  #new > div ul {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "n1 n1  n2 n2 n3 n3" ". n4 n4 n5 n5 .";
+  }
+}
+#new > div ul li {
+  background-color: #F8F9FA;
+}
+#new > div ul li img {
   width: 100%;
 }
-#new ul li section {
+#new > div ul li section {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". new-content .";
 }
-#new ul li section > div {
+#new > div ul li section > div {
   grid-area: new-content;
+}
+@media (min-width: 768px) {
+  #new > div ul #n1 {
+    grid-area: n1;
+  }
+}
+@media (min-width: 768px) {
+  #new > div ul #n2 {
+    grid-area: n2;
+  }
+}
+@media (min-width: 768px) {
+  #new > div ul #n3 {
+    grid-area: n3;
+  }
+}
+@media (min-width: 768px) {
+  #new > div ul #n4 {
+    grid-area: n4;
+  }
+}
+@media (min-width: 768px) {
+  #new > div ul #n5 {
+    grid-area: n5;
+  }
 }

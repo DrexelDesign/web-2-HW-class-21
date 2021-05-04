@@ -460,6 +460,7 @@ footer > div section ul li i {
     Hero
 ============= */
 #hero img {
+  object-fit: cover;
   width: 100%;
 }
 @media (min-width: 768px) {
@@ -533,6 +534,26 @@ footer > div section ul li i {
 }
 #planning ul li > div {
   grid-area: planning-content;
+}
+#planning ul li > div aside div {
+  background-position: center;
+  background-size: cover;
+  border: 4px #fff solid;
+  height: 85px;
+  width: 85px;
+  border-radius: 100%;
+}
+@media (min-width: 768px) {
+  #planning ul li > div aside div {
+    height: 113px;
+    width: 113px;
+  }
+}
+#planning ul li > div aside #planning-left {
+  background-image: url("../img/planning/planning-left.jpg");
+}
+#planning ul li > div aside #planning-right {
+  background-image: url("../img/planning/planning-right.jpg");
 }
 
 /* =============

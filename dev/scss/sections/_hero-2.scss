@@ -13,9 +13,11 @@
 
     ul{
         display: grid;
+        grid-template-rows: 360px 486px;
 
         @include md{
             grid-template-columns: 50% auto;
+            grid-template-rows: 625px;
         }
 
         @include lg{
@@ -24,21 +26,28 @@
 
         @include xl{
             grid-area: hero-2;
-
             grid-template-columns: 65% auto;
+            // grid-template-rows: repeat(2 377px);
+            grid-template-rows: 377px 377px;
+            // grid-column: 377px 377px;
             grid-template-areas: 
             "h2-1 h2-2"
             "h2-1 h2-3";
+
+
         }
 
 
         li{
-            img{
-                width: 100%;
-            }
+            background-size: cover;
+            background-position: center;
+            // img{
+            //     width: 100%;
+            // }
         }
 
         #h2-1{
+            background-image: url("../img/hero-2/hero-2-1.jpg");
 
             @include xl{
                 grid-area: h2-1;
@@ -46,6 +55,16 @@
         }
 
         #h2-2{
+            background-image: url("../img/hero-2/hero-2-2.jpg");
+
+            @include md{
+                background-position: center bottom;
+            }
+
+            @include lg{
+                background-position: center;
+            }
+
 
             @include xl{
                 grid-area: h2-2;
@@ -54,7 +73,7 @@
 
         #h2-3{
             display: none;
-
+            background-image: url("../img/hero-2/hero-2-3.jpg");
             @include xl{
                 display: list-item;
                 grid-area: h2-3;

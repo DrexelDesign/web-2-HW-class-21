@@ -568,10 +568,12 @@ footer > div section ul li i {
 }
 #hero-2 ul {
   display: grid;
+  grid-template-rows: 360px 486px;
 }
 @media (min-width: 768px) {
   #hero-2 ul {
     grid-template-columns: 50% auto;
+    grid-template-rows: 625px;
   }
 }
 @media (min-width: 1024px) {
@@ -583,15 +585,33 @@ footer > div section ul li i {
   #hero-2 ul {
     grid-area: hero-2;
     grid-template-columns: 65% auto;
+    grid-template-rows: 377px 377px;
     grid-template-areas: "h2-1 h2-2" "h2-1 h2-3";
   }
 }
-#hero-2 ul li img {
-  width: 100%;
+#hero-2 ul li {
+  background-size: cover;
+  background-position: center;
+}
+#hero-2 ul #h2-1 {
+  background-image: url("../img/hero-2/hero-2-1.jpg");
 }
 @media (min-width: 1200px) {
   #hero-2 ul #h2-1 {
     grid-area: h2-1;
+  }
+}
+#hero-2 ul #h2-2 {
+  background-image: url("../img/hero-2/hero-2-2.jpg");
+}
+@media (min-width: 768px) {
+  #hero-2 ul #h2-2 {
+    background-position: center bottom;
+  }
+}
+@media (min-width: 1024px) {
+  #hero-2 ul #h2-2 {
+    background-position: center;
   }
 }
 @media (min-width: 1200px) {
@@ -601,6 +621,7 @@ footer > div section ul li i {
 }
 #hero-2 ul #h2-3 {
   display: none;
+  background-image: url("../img/hero-2/hero-2-3.jpg");
 }
 @media (min-width: 1200px) {
   #hero-2 ul #h2-3 {

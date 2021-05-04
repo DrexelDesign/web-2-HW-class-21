@@ -352,11 +352,14 @@ template {
 /* =============
     Base
 ============= */
-ul {
+body {
+  font-family: "Open Sans", sans-serif;
+}
+body ul {
   margin: 0;
   padding: 0;
 }
-ul li {
+body ul li {
   list-style: none;
 }
 

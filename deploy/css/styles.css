@@ -353,7 +353,7 @@ template {
     Base
 ============= */
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 body ul {
   margin: 0;
@@ -455,6 +455,27 @@ footer > div section ul li i {
 #search > div {
   grid-area: search;
 }
+@media (min-width: 768px) {
+  #search > div form input {
+    font-size: 1.875rem;
+    font-weight: 300;
+    color: #93A8AC;
+  }
+  #search > div form input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #93A8AC;
+    /* Firefox */
+    opacity: 1;
+  }
+  #search > div form input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #93A8AC;
+  }
+  #search > div form input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #93A8AC;
+  }
+}
 #search > div form button {
   background-color: #FFD205;
 }
@@ -537,6 +558,20 @@ footer > div section ul li i {
 }
 #planning ul li > div {
   grid-area: planning-content;
+}
+#planning ul li > div section h1 {
+  font-size: 1.375rem;
+  font-variation-settings: "wght" 205;
+}
+@media (min-width: 768px) {
+  #planning ul li > div section h1 {
+    font-size: 1.8125rem;
+  }
+}
+@media (min-width: 1024px) {
+  #planning ul li > div section h1 {
+    font-size: 1.9375rem;
+  }
 }
 #planning ul li > div aside div {
   background-position: center;

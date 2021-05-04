@@ -19,6 +19,35 @@
 
             input{
 
+                @include md{
+
+                    // 16px = 1em;
+
+                    // 1em = 1rem;
+
+                    // font-size: 30px;
+                    font-size: rem-calc(30);
+                    font-weight: 300;
+                    color: $stoneSilver;
+
+                    &::placeholder {
+                        /* Chrome, Firefox, Opera, Safari 10.1+ */
+                        color: $stoneSilver;
+                        /* Firefox */
+                        opacity: 1;
+                    }
+    
+                    &:-ms-input-placeholder {
+                        /* Internet Explorer 10-11 */
+                        color: $stoneSilver;
+                    }
+    
+                    &::-ms-input-placeholder {
+                        /* Microsoft Edge */
+                        color: $stoneSilver;
+                    }
+                }
+
             }
 
             button{

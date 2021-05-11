@@ -4,6 +4,7 @@
 
 #hero{
     img{
+        display: block;
         object-fit: cover;
         width: 100%;
     }
@@ -12,7 +13,7 @@
 
         @include md{
             display: grid;
-            grid-template-columns: 40% auto;
+            grid-template-columns: 45% auto;
         }
 
         @include lg{
@@ -28,20 +29,70 @@
                 grid-template-columns: auto 480px 16px;
             }
 
-            a{
+            a:link, a:visited{
                 grid-area: hero-content; 
-                border: 1px solid red;
+                // border: 1px solid red;
+                color: $black;
+                transition: 0.25s;
+
+                display: flex;
+
+            
+                &:hover, &:active{
+                    color: $white;
+                    background-color: $black;
+                }
+
+                div{
+                    padding: 16px 0;
+
+                }
+
+                .hero-sub-bottom{
+                    margin-left: auto;
+                    display: flex;
+                    align-items: center;
+                    h5{
+                        display: none;
+
+                        @include lg{
+                            display: block;
+                            margin-right: 10px;
+                        }
+                    }
+                }
             }
         }
 
         #hero-sub-1{
             background-color: $yellowDark;
+            h2{
+                font-size: rem-calc(18);
+                font-weight: 700;
+                font-variation-settings: "wght" 700;
+            }
+
+            p{
+                font-size: rem-calc(16);
+                font-weight: 600;
+                font-variation-settings: "wght" 600;
+            }
         }
 
         #hero-sub-2{
             background-color: $yellow;
             @include xl{
                 grid-template-columns:  16px 480px auto;
+            }
+
+
+            p{
+                font-size: rem-calc(16);
+                font-variation-settings: "wght" 400;
+                margin-bottom: 5px;
+                span{
+                    font-variation-settings: "wght" 700;
+                }
             }
         }
     }

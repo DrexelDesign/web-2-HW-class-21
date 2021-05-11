@@ -366,6 +366,11 @@ body ul li {
 /* =============
     Typography
 ============= */
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+
 /* =============
     Buttons
 ============= */
@@ -375,6 +380,10 @@ body ul li {
 /* =============
     Navigation
 ============= */
+a {
+  text-decoration: none;
+}
+
 /* =============
     Header
 ============= */
@@ -514,13 +523,14 @@ footer > div section ul li i {
     Hero
 ============= */
 #hero img {
+  display: block;
   object-fit: cover;
   width: 100%;
 }
 @media (min-width: 768px) {
   #hero ul {
     display: grid;
-    grid-template-columns: 40% auto;
+    grid-template-columns: 45% auto;
   }
 }
 @media (min-width: 1024px) {
@@ -538,12 +548,45 @@ footer > div section ul li i {
     grid-template-columns: auto 480px 16px;
   }
 }
-#hero ul li a {
+#hero ul li a:link, #hero ul li a:visited {
   grid-area: hero-content;
-  border: 1px solid red;
+  color: #000;
+  transition: 0.25s;
+  display: flex;
+}
+#hero ul li a:link:hover, #hero ul li a:link:active, #hero ul li a:visited:hover, #hero ul li a:visited:active {
+  color: #fff;
+  background-color: #000;
+}
+#hero ul li a:link div, #hero ul li a:visited div {
+  padding: 16px 0;
+}
+#hero ul li a:link .hero-sub-bottom, #hero ul li a:visited .hero-sub-bottom {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+#hero ul li a:link .hero-sub-bottom h5, #hero ul li a:visited .hero-sub-bottom h5 {
+  display: none;
+}
+@media (min-width: 1024px) {
+  #hero ul li a:link .hero-sub-bottom h5, #hero ul li a:visited .hero-sub-bottom h5 {
+    display: block;
+    margin-right: 10px;
+  }
 }
 #hero ul #hero-sub-1 {
   background-color: #E2BA06;
+}
+#hero ul #hero-sub-1 h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
+}
+#hero ul #hero-sub-1 p {
+  font-size: 1rem;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
 }
 #hero ul #hero-sub-2 {
   background-color: #FFD205;
@@ -552,6 +595,14 @@ footer > div section ul li i {
   #hero ul #hero-sub-2 {
     grid-template-columns: 16px 480px auto;
   }
+}
+#hero ul #hero-sub-2 p {
+  font-size: 1rem;
+  font-variation-settings: "wght" 400;
+  margin-bottom: 5px;
+}
+#hero ul #hero-sub-2 p span {
+  font-variation-settings: "wght" 700;
 }
 
 /* =============

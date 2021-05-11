@@ -8,54 +8,151 @@ footer {
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". footer .";
 
-    @include xl{
+    padding: 24px 0;
+
+    @include md {
+        padding: 32px 0;
+    }
+
+    @include xl {
         grid-template-columns: auto 1200px auto;
+        padding: 64px 0;
     }
 
     >div {
         grid-area: footer;
+
         // border: 1px solid red;
-        @include md{
+        @include md {
             display: grid;
             grid-template-columns: 50% auto;
-            grid-template-areas: 
-            "locations sing-up"
-            "locations follow";
+            grid-template-areas:
+                "locations sing-up"
+                "locations follow";
         }
 
-        @include xl{
+        @include xl {
             grid-template-columns: repeat(3, 1fr);
-            grid-template-areas: 
-            "locations sing-up follow";
+            grid-template-areas:
+                "locations sing-up follow";
         }
 
-        section{
+        section {
             // border: 1px solid thistle;
 
-            ul{
-                li{
-                    i{
+            
+        }
+
+        #locations {
+            @include md {
+                grid-area: locations;
+            }
+
+            ul {
+                li {
+                    display: flex;
+                    margin-bottom: 24px;
+
+                    i {
                         color: $yellow;
+                        margin-right: 10px;
+                    }
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    a:link,
+                    a:visited {
+                        color: $white;
+
+                        &:hover,
+                        &:active {
+                            color: $yellow;
+                        }
                     }
                 }
             }
         }
 
-        #locations{
-            @include md{
-                grid-area: locations;
-            }
-        }
-
-        #sign-up{
-            @include md{
+        #sign-up {
+            @include md {
                 grid-area: sing-up;
             }
+
+            form {
+                input {
+                    background-color: $stoneSilver;
+                    border: none;
+                    color: $blueDark;
+                    padding: 16px 2%;
+                    width: 96%;
+                    border-radius: 0;
+                    ;
+
+
+                    &::placeholder {
+                        /* Chrome, Firefox, Opera, Safari 10.1+ */
+                        color: $blueDark;
+                        /* Firefox */
+                        opacity: 1;
+                    }
+
+                    &:-ms-input-placeholder {
+                        /* Internet Explorer 10-11 */
+                        color: $blueDark;
+                    }
+
+                    &::-ms-input-placeholder {
+                        /* Microsoft Edge */
+                        color: $blueDark;
+                    }
+                }
+
+                button {
+                    display: flex;
+                    margin-left: auto;
+                    margin-top: 16px;
+                }
+
+            }
         }
 
-        #follow{
-            @include md{
+        #follow {
+            @include md {
                 grid-area: follow;
+            }
+
+            @include xl{
+                text-align: right;
+            }
+
+            ul {
+                display: flex;
+                margin-top: 16px;
+                justify-content: flex-end;
+
+
+                li {
+                    margin: 0 16px;
+
+                    @include md {
+                        margin: 0 8px;
+                    }
+
+                    a:link,
+                    a:visited {
+                        color: $white;
+                        font-size: rem-calc(30);
+
+                        &:hover,
+                        &:active {
+                            color: $yellow;
+                        }
+                    }
+
+                }
             }
         }
 

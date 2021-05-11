@@ -4,10 +4,13 @@
 
 #planning{
 
+    padding: 16px 0;
+
     @include md{
         display: grid;
         grid-template-columns: 16px auto 16px;
         grid-template-areas: ". planning .";
+        padding: 24px 0;
     }
 
     @include xl{
@@ -29,30 +32,79 @@
             grid-template-columns: 16px auto 16px;
             grid-template-areas: ". planning-content .";
             background-color: $grey;
+            padding: 24px 0;
 
             >div{
                 grid-area: planning-content; 
 
+                display: flex;
+
 
                 section{
-                    h1{
-                        font-size: rem-calc(22);
-                        // font-weight: 400;
 
-                        font-variation-settings: "wght" 205;
+                    // display: flex;
+                    // align-items: center;
 
-                        @include md{
-                            font-size: rem-calc(29);
-                        }
+                    display: grid;
+                    grid-template-rows: 50% auto;
 
-                        @include lg{
-                            font-size: rem-calc(31);
+
+                    article{
+                        h1{
+                            font-size: rem-calc(22);
+                            // font-weight: 400;
+    
+                            font-variation-settings: "wght" 400;
+    
+                            @include md{
+                                font-size: rem-calc(29);
+                            }
+    
+                            @include lg{
+                                font-size: rem-calc(31);
+                            }
                         }
                     }
 
+
+                    .planning-bottom{
+                        display: flex;
+                        align-items: flex-end;
+                        margin-left: 0;
+
+                    }
+
+                    // >div{
+                    //     h1{
+                    //         font-size: rem-calc(22);
+                    //         // font-weight: 400;
+    
+                    //         font-variation-settings: "wght" 400;
+    
+                    //         @include md{
+                    //             font-size: rem-calc(29);
+                    //         }
+    
+                    //         @include lg{
+                    //             font-size: rem-calc(31);
+                    //         }
+                    //     }
+
+                    //     div{
+                    //         border: 1px solid red;
+                    //         height: 100%;
+                    //     }
+
+                    //     button{
+                    //         margin-top: 10px;
+                    //     }
+    
+                    // }
+                   
                 }
 
                 aside{
+                    margin-left: auto;
                     div{
                         background-position: center;
                         background-size: cover;

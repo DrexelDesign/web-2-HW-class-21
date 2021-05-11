@@ -374,6 +374,20 @@ h1, h2, h3, h4, h5, h6, p {
 /* =============
     Buttons
 ============= */
+.yellow-button {
+  background-color: #FFD205;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
+  padding: 10px;
+  transition: 0.25s;
+}
+.yellow-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 /* =============
     Forms
 ============= */
@@ -608,11 +622,15 @@ footer > div section ul li i {
 /* =============
     Planning
 ============= */
+#planning {
+  padding: 16px 0;
+}
 @media (min-width: 768px) {
   #planning {
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". planning .";
+    padding: 24px 0;
   }
 }
 @media (min-width: 1200px) {
@@ -636,23 +654,37 @@ footer > div section ul li i {
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". planning-content .";
   background-color: #E0DFD5;
+  padding: 24px 0;
 }
 #planning ul li > div {
   grid-area: planning-content;
+  display: flex;
 }
-#planning ul li > div section h1 {
+#planning ul li > div section {
+  display: grid;
+  grid-template-rows: 50% auto;
+}
+#planning ul li > div section article h1 {
   font-size: 1.375rem;
-  font-variation-settings: "wght" 205;
+  font-variation-settings: "wght" 400;
 }
 @media (min-width: 768px) {
-  #planning ul li > div section h1 {
+  #planning ul li > div section article h1 {
     font-size: 1.8125rem;
   }
 }
 @media (min-width: 1024px) {
-  #planning ul li > div section h1 {
+  #planning ul li > div section article h1 {
     font-size: 1.9375rem;
   }
+}
+#planning ul li > div section .planning-bottom {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 0;
+}
+#planning ul li > div aside {
+  margin-left: auto;
 }
 #planning ul li > div aside div {
   background-position: center;

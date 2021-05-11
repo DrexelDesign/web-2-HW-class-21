@@ -6,9 +6,13 @@ header{
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". header .";
     background-color: $blueDark;
+    padding: 21px 0;
+
+    @include md{
+        padding: 24px 0;
+    }
 
     >div{
-        
         grid-area: header;
     }
 }

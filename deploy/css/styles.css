@@ -383,6 +383,12 @@ header {
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". header .";
   background-color: #2A3036;
+  padding: 21px 0;
+}
+@media (min-width: 768px) {
+  header {
+    padding: 24px 0;
+  }
 }
 header > div {
   grid-area: header;
@@ -446,6 +452,12 @@ footer > div section ul li i {
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". search .";
   background-color: #F8F9FA;
+  padding: 18px 0;
+}
+@media (min-width: 768px) {
+  #search {
+    padding: 22px 0;
+  }
 }
 @media (min-width: 1200px) {
   #search {
@@ -454,6 +466,18 @@ footer > div section ul li i {
 }
 #search > div {
   grid-area: search;
+}
+#search > div form {
+  display: flex;
+}
+#search > div form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #93A8AC;
+  font-weight: 400;
+  font-size: 1.125rem;
+  border-radius: 0px;
+  width: 100%;
 }
 @media (min-width: 768px) {
   #search > div form input {
@@ -477,7 +501,13 @@ footer > div section ul li i {
   }
 }
 #search > div form button {
+  margin-left: auto;
   background-color: #FFD205;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1.875rem;
+  margin-left: 10px;
 }
 
 /* =============

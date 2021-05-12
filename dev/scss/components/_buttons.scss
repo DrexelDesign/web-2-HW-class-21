@@ -2,17 +2,16 @@
     Buttons
 ============= */
 .yellow-button {
-    background-color: $yellow;
-    border: none;
-    font-size: rem-calc(16);
-    font-weight: 600;
-    font-variation-settings: "wght" 600;
-    padding: 10px;
-    transition: 0.25s;
-    cursor: pointer;
-
-    &:hover {
-        background-color: $black;
-        color: $white;
-    }
+	background-color: $yellow;
+	border: none;
+	cursor: pointer;
+	font-size: rem-calc(16);
+	font-variation-settings: "wght"600;
+	font-weight: 600;
+	padding: 10px;
+	transition: 0.25s;
+	&:hover {
+		background-color: $black;
+		color: $white;
+	}
 }

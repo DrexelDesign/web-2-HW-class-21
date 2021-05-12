@@ -1,93 +1,63 @@
 /* =============
     Search
 ============= */
-#search{
-    display: grid;
-    grid-template-columns: 16px auto 16px;
-    grid-template-areas: ". search .";
-    background-color: $greyLight;
-    padding: 18px 0;
-
-    @include md{
-        padding:22px 0;
-    }
-
-    @include xl{
-        grid-template-columns: auto 1000px auto;
-    }
-
-    >div{
-        // border: 5px solid red;
-        grid-area: search;
-
-        form{
-
-            // display: grid;
-            // grid-template-columns: 80% auto;
-            // gap: 10px;
-
-            // @include md{
-            //     grid-template-columns: 90% auto;
-            // }
-
-            // @include xl{
-            //     grid-template-columns: 92% auto;
-            // }
-
-            display: flex;
-
-            input{
-                background-color: transparent;
-                border: none;
-                border-bottom: 1px solid $stoneSilver;
-                font-weight: 400;
-                font-size: rem-calc(20);
-                border-radius: 0px;
-                width: 100%;
-    
-                @include md{
-                    // 16px = 1em;
-                    // 1em = 1rem;
-                    // font-size: 30px;
-                    font-size: rem-calc(30);
-                    font-weight: 300;
-                    font-variation-settings: "wght"400;
+#search {
+	background-color: $greyLight;
+	display: grid;
+	grid-template-areas: ". search .";
+	grid-template-columns: 16px auto 16px;
+	padding: 18px 0;
+	@include md {
+		padding: 22px 0;
+	}
+	@include xl {
+		grid-template-columns: auto 1000px auto;
+	}
+	>div {
+		grid-area: search;
+		form {
+			display: flex;
+			input {
+				background-color: transparent;
+				border: none;
+				border-bottom: 1px solid $stoneSilver;
+				border-radius: 0px;
+				font-size: rem-calc(20);
+				font-weight: 400;
+				width: 100%;
+				@include md {
+					// font-size: 30px;
+					color: $stoneSilver;
+					font-size: rem-calc(30);
+					font-variation-settings: "wght"400;
+					font-weight: 300;
+				}
+				&::placeholder {
+					/* Chrome, Firefox, Opera, Safari 10.1+ */
                     color: $stoneSilver;
-                }
-
-                &::placeholder {
-                    /* Chrome, Firefox, Opera, Safari 10.1+ */
-                    color: $stoneSilver;
-                    font-variation-settings: "wght"400;
-                    /* Firefox */
+					/* Firefox */
                     opacity: 1;
-                }
-
-                &:-ms-input-placeholder {
-                    /* Internet Explorer 10-11 */
+					font-variation-settings: "wght"400;
+				}
+				&:-ms-input-placeholder {
+					/* Internet Explorer 10-11 */
                     color: $stoneSilver;
-                    font-variation-settings: "wght"400;
-                }
-
-                &::-ms-input-placeholder {
-                    /* Microsoft Edge */
+					font-variation-settings: "wght"400;
+				}
+				&::-ms-input-placeholder {
+					/* Microsoft Edge */
                     color: $stoneSilver;
-                    font-variation-settings: "wght"400;
-                }
-
-            }
-
-            button{
-                margin-left: auto;
-                background-color: $yellow;
-                border: none;
-                border-radius: 5px;
-                padding: 10px 15px;
-                // padding: 10px 0;
-                font-size: rem-calc(30);
-                margin-left: 10px;
-                // width: 50px;
-            }
-        }
-    }
+					font-variation-settings: "wght"400;
+				}
+			}
+			button {
+				background-color: $yellow;
+				border: none;
+				border-radius: 5px;
+				font-size: rem-calc(30);
+				margin-left: 10px;
+				padding: 10px 15px;
+			}
+		}
+	}
 }

@@ -377,12 +377,12 @@ h1, h2, h3, h4, h5, h6, p {
 .yellow-button {
   background-color: #FFD205;
   border: none;
+  cursor: pointer;
   font-size: 1rem;
-  font-weight: 600;
   font-variation-settings: "wght" 600;
+  font-weight: 600;
   padding: 10px;
   transition: 0.25s;
-  cursor: pointer;
 }
 .yellow-button:hover {
   background-color: #000;
@@ -425,8 +425,8 @@ footer {
   background-color: #2A3036;
   color: #fff;
   display: grid;
-  grid-template-columns: 16px auto 16px;
   grid-template-areas: ". footer .";
+  grid-template-columns: 16px auto 16px;
   padding: 24px 0;
 }
 @media (min-width: 768px) {
@@ -446,15 +446,15 @@ footer > div {
 @media (min-width: 768px) {
   footer > div {
     display: grid;
-    grid-template-columns: 50% auto;
     gap: 16px;
     grid-template-areas: "locations sing-up" "locations follow";
+    grid-template-columns: 50% auto;
   }
 }
 @media (min-width: 1200px) {
   footer > div {
-    grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "locations sing-up follow";
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 footer > div .footer-section {
@@ -472,8 +472,8 @@ footer > div .footer-section h1 {
 }
 footer > div #locations section {
   border-bottom: 1px solid #fff;
-  padding-bottom: 16px;
   margin-bottom: 16px;
+  padding-bottom: 16px;
 }
 footer > div #locations section h2 {
   font-size: 1rem;
@@ -491,8 +491,8 @@ footer > div #locations section ul li i {
   margin-right: 10px;
 }
 footer > div #locations section ul li div {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 footer > div #locations section ul li a:link,
 footer > div #locations section ul li a:visited {
@@ -505,8 +505,8 @@ footer > div #locations section ul li a:visited:active {
 }
 footer > div #locations section:last-child {
   border: none;
-  padding-bottom: 0px;
   margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 @media (min-width: 768px) {
   footer > div #sign-up {
@@ -516,11 +516,11 @@ footer > div #locations section:last-child {
 footer > div #sign-up form input {
   background-color: #ADB5BD;
   border: none;
+  border-radius: 0;
   color: #2A3036;
+  font-variation-settings: "wght" 400;
   padding: 16px 2%;
   width: 96%;
-  border-radius: 0;
-  font-variation-settings: "wght" 400;
 }
 footer > div #sign-up form input::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -551,9 +551,11 @@ footer > div #sign-up form button {
     text-align: right;
   }
 }
+footer > div #follow ul {
+  display: flex;
+}
 @media (min-width: 1024px) {
   footer > div #follow ul {
-    display: flex;
     justify-content: flex-end;
   }
 }
@@ -580,10 +582,10 @@ footer > div #follow ul li a:visited:active {
     Search
 ============= */
 #search {
-  display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". search .";
   background-color: #F8F9FA;
+  display: grid;
+  grid-template-areas: ". search .";
+  grid-template-columns: 16px auto 16px;
   padding: 18px 0;
 }
 @media (min-width: 768px) {
@@ -606,25 +608,25 @@ footer > div #follow ul li a:visited:active {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #93A8AC;
-  font-weight: 400;
-  font-size: 1.25rem;
   border-radius: 0px;
+  font-size: 1.25rem;
+  font-weight: 400;
   width: 100%;
 }
 @media (min-width: 768px) {
   #search > div form input {
-    font-size: 1.875rem;
-    font-weight: 300;
-    font-variation-settings: "wght" 400;
     color: #93A8AC;
+    font-size: 1.875rem;
+    font-variation-settings: "wght" 400;
+    font-weight: 300;
   }
 }
 #search > div form input::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #93A8AC;
-  font-variation-settings: "wght" 400;
   /* Firefox */
   opacity: 1;
+  font-variation-settings: "wght" 400;
 }
 #search > div form input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
@@ -637,13 +639,12 @@ footer > div #follow ul li a:visited:active {
   font-variation-settings: "wght" 400;
 }
 #search > div form button {
-  margin-left: auto;
   background-color: #FFD205;
   border: none;
   border-radius: 5px;
-  padding: 10px 15px;
   font-size: 1.875rem;
   margin-left: 10px;
+  padding: 10px 15px;
 }
 
 /* =============
@@ -754,8 +755,8 @@ footer > div #follow ul li a:visited:active {
 @media (min-width: 768px) {
   #planning {
     display: grid;
-    grid-template-columns: 16px auto 16px;
     grid-template-areas: ". planning .";
+    grid-template-columns: 16px auto 16px;
     padding: 24px 0;
   }
 }
@@ -770,27 +771,28 @@ footer > div #follow ul li a:visited:active {
 }
 @media (min-width: 768px) {
   #planning ul {
-    grid-template-columns: 50% auto;
     gap: 24px;
     grid-area: planning;
+    grid-template-columns: 50% auto;
   }
 }
 #planning ul li {
-  display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". planning-content .";
   background-color: #E0DFD5;
+  display: grid;
+  grid-template-areas: ". planning-content .";
+  grid-template-columns: 16px auto 16px;
   padding: 24px 0;
 }
 #planning ul li > div {
-  grid-area: planning-content;
   display: flex;
+  grid-area: planning-content;
 }
 #planning ul li > div section {
   display: grid;
   grid-template-rows: 50% auto;
 }
 #planning ul li > div section article h1 {
+  font-weight: 400;
   font-size: 1.375rem;
   font-variation-settings: "wght" 400;
 }
@@ -805,8 +807,8 @@ footer > div #follow ul li a:visited:active {
   }
 }
 #planning ul li > div section .planning-bottom {
-  display: flex;
   align-items: flex-end;
+  display: flex;
   margin-left: 0;
 }
 #planning ul li > div aside {
@@ -816,9 +818,9 @@ footer > div #follow ul li a:visited:active {
   background-position: center;
   background-size: cover;
   border: 4px #fff solid;
+  border-radius: 100%;
   height: 85px;
   width: 85px;
-  border-radius: 100%;
 }
 @media (min-width: 768px) {
   #planning ul li > div aside div {
@@ -839,8 +841,8 @@ footer > div #follow ul li a:visited:active {
 @media (min-width: 1200px) {
   #hero-2 {
     display: grid;
-    grid-template-columns: auto 1200px auto;
     grid-template-areas: ". hero-2 .";
+    grid-template-columns: auto 1200px auto;
   }
 }
 #hero-2 ul {
@@ -861,14 +863,14 @@ footer > div #follow ul li a:visited:active {
 @media (min-width: 1200px) {
   #hero-2 ul {
     grid-area: hero-2;
+    grid-template-areas: "h2-1 h2-2" "h2-1 h2-3";
     grid-template-columns: 65% auto;
     grid-template-rows: 377px 377px;
-    grid-template-areas: "h2-1 h2-2" "h2-1 h2-3";
   }
 }
 #hero-2 ul li {
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 }
 #hero-2 ul #h2-1 {
   background-image: url("../img/hero-2/hero-2-1.jpg");
@@ -897,8 +899,8 @@ footer > div #follow ul li a:visited:active {
   }
 }
 #hero-2 ul #h2-3 {
-  display: none;
   background-image: url("../img/hero-2/hero-2-3.jpg");
+  display: none;
 }
 @media (min-width: 1200px) {
   #hero-2 ul #h2-3 {

@@ -5,9 +5,8 @@ footer {
     background-color: $blueDark;
     color: $white;
     display: grid;
-    grid-template-columns: 16px auto 16px;
     grid-template-areas: ". footer .";
-
+    grid-template-columns: 16px auto 16px;
     padding: 24px 0;
 
     @include md {
@@ -21,23 +20,23 @@ footer {
 
     >div {
         grid-area: footer;
+
         @include md {
             display: grid;
-            grid-template-columns: 50% auto;
             gap: 16px;
-            grid-template-areas:
-                "locations sing-up"
+            grid-template-areas: "locations sing-up"
                 "locations follow";
+            grid-template-columns: 50% auto;
         }
 
         @include xl {
+            grid-template-areas: "locations sing-up follow";
             grid-template-columns: repeat(3, 1fr);
-            grid-template-areas:
-                "locations sing-up follow";
         }
 
         .footer-section {
             padding-bottom: 24px;
+
             h1 {
                 font-size: rem-calc(20);
                 font-variation-settings: "wght"600;
@@ -52,8 +51,8 @@ footer {
 
             section {
                 border-bottom: 1px solid $white;
-                padding-bottom: 16px;
                 margin-bottom: 16px;
+                padding-bottom: 16px;
 
                 h2 {
                     font-size: rem-calc(16);
@@ -68,16 +67,14 @@ footer {
                         font-variation-settings: "wght"400;
                         margin-bottom: 8px;
 
-
-
                         i {
                             color: $yellow;
                             margin-right: 10px;
                         }
 
                         div {
-                            display: flex;
                             align-items: center;
+                            display: flex;
                         }
 
                         a:link,
@@ -92,14 +89,12 @@ footer {
                     }
                 }
 
-                &:last-child{
-                    border:none;
+                &:last-child {
+                    border: none;
+                    margin-bottom: 0px;
                     padding-bottom: 0px;
-                margin-bottom: 0px;
                 }
             }
-
-
         }
 
         #sign-up {
@@ -111,13 +106,11 @@ footer {
                 input {
                     background-color: $blueLight;
                     border: none;
+                    border-radius: 0;
                     color: $blueDark;
+                    font-variation-settings: "wght"400;
                     padding: 16px 2%;
                     width: 96%;
-                    border-radius: 0;
-                    font-variation-settings: "wght"400;
-                    
-
 
                     &::placeholder {
                         /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -142,7 +135,6 @@ footer {
                     margin-left: auto;
                     margin-top: 16px;
                 }
-
             }
         }
 
@@ -156,13 +148,11 @@ footer {
             }
 
             ul {
-                
+                display: flex;
 
-                @include lg{
-                    display: flex;
+                @include lg {
                     justify-content: flex-end;
                 }
-
 
                 li {
                     margin-right: 16px;
@@ -181,10 +171,8 @@ footer {
                             color: $yellow;
                         }
                     }
-
                 }
             }
         }
-
     }
 }

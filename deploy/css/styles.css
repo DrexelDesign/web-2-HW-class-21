@@ -382,6 +382,7 @@ h1, h2, h3, h4, h5, h6, p {
   font-variation-settings: "wght" 600;
   padding: 10px;
   transition: 0.25s;
+  cursor: pointer;
 }
 .yellow-button:hover {
   background-color: #000;
@@ -446,6 +447,7 @@ footer > div {
   footer > div {
     display: grid;
     grid-template-columns: 50% auto;
+    gap: 16px;
     grid-template-areas: "locations sing-up" "locations follow";
   }
 }
@@ -549,8 +551,11 @@ footer > div #sign-up form button {
     text-align: right;
   }
 }
-footer > div #follow ul {
-  display: flex;
+@media (min-width: 1024px) {
+  footer > div #follow ul {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 footer > div #follow ul li {
   margin-right: 16px;
@@ -928,9 +933,22 @@ footer > div #follow ul li a:visited:active {
   }
 }
 #new > div #new-title {
-  font-size: 1.25rem;
-  font-variation-settings: "wght" 300;
+  font-size: 1.5625rem;
+  font-variation-settings: "wght" 400;
   padding: 0px 16px 24px;
+  color: #93A8AC;
+}
+@media (min-width: 768px) {
+  #new > div #new-title {
+    padding-left: 0;
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 1024px) {
+  #new > div #new-title {
+    font-size: 2.3125rem;
+    font-variation-settings: "wght" 300;
+  }
 }
 #new > div ul {
   display: grid;

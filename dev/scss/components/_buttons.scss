@@ -9,6 +9,7 @@
     font-variation-settings: "wght" 600;
     padding: 10px;
     transition: 0.25s;
+    cursor: pointer;
 
     &:hover {
         background-color: $black;

@@ -21,11 +21,10 @@ footer {
 
     >div {
         grid-area: footer;
-
-        // border: 1px solid red;
         @include md {
             display: grid;
             grid-template-columns: 50% auto;
+            gap: 16px;
             grid-template-areas:
                 "locations sing-up"
                 "locations follow";
@@ -157,9 +156,12 @@ footer {
             }
 
             ul {
-                display: flex;
-                // margin-top: 16px;
-                // justify-content: flex-end;
+                
+
+                @include lg{
+                    display: flex;
+                    justify-content: flex-end;
+                }
 
 
                 li {

@@ -639,7 +639,7 @@ footer > div #follow ul li a:visited:active {
 }
 @media (min-width: 1200px) {
   #hero ul li {
-    grid-template-columns: auto 480px 16px;
+    grid-template-columns: auto 496px 0px;
   }
 }
 #hero ul li a:link, #hero ul li a:visited {
@@ -662,22 +662,32 @@ footer > div #follow ul li a:visited:active {
 }
 #hero ul li a:link .hero-sub-bottom h5, #hero ul li a:visited .hero-sub-bottom h5 {
   display: none;
+  font-variation-settings: "wght" 800;
 }
 @media (min-width: 1024px) {
   #hero ul li a:link .hero-sub-bottom h5, #hero ul li a:visited .hero-sub-bottom h5 {
     display: block;
     margin-right: 10px;
+    font-size: 1.125rem;
   }
 }
 #hero ul #hero-sub-1 {
   background-color: #E2BA06;
 }
-#hero ul #hero-sub-1 h2 {
+#hero ul #hero-sub-1 a {
+  padding-right: 16px;
+}
+#hero ul #hero-sub-1 a h2 {
   font-size: 1.125rem;
   font-weight: 700;
   font-variation-settings: "wght" 700;
 }
-#hero ul #hero-sub-1 p {
+@media (min-width: 1024px) {
+  #hero ul #hero-sub-1 a h2 {
+    font-size: 1.5625rem;
+  }
+}
+#hero ul #hero-sub-1 a p {
   font-size: 1rem;
   font-weight: 600;
   font-variation-settings: "wght" 600;
@@ -687,15 +697,18 @@ footer > div #follow ul li a:visited:active {
 }
 @media (min-width: 1200px) {
   #hero ul #hero-sub-2 {
-    grid-template-columns: 16px 480px auto;
+    grid-template-columns: 0px 496px auto;
   }
 }
-#hero ul #hero-sub-2 p {
+#hero ul #hero-sub-2 a {
+  padding-left: 16px;
+}
+#hero ul #hero-sub-2 a p {
   font-size: 1rem;
   font-variation-settings: "wght" 400;
   margin-bottom: 5px;
 }
-#hero ul #hero-sub-2 p span {
+#hero ul #hero-sub-2 a p span {
   font-variation-settings: "wght" 700;
 }
 

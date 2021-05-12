@@ -26,7 +26,7 @@
             grid-template-areas: ". hero-content .";
 
             @include xl{
-                grid-template-columns: auto 480px 16px;
+                grid-template-columns: auto 496px 0px;
             }
 
             a:link, a:visited{
@@ -54,10 +54,12 @@
                     align-items: center;
                     h5{
                         display: none;
+                        font-variation-settings: "wght" 800;
 
                         @include lg{
                             display: block;
                             margin-right: 10px;
+                            font-size: rem-calc(18);
                         }
                     }
                 }
@@ -66,34 +68,47 @@
 
         #hero-sub-1{
             background-color: $yellowDark;
-            h2{
-                font-size: rem-calc(18);
-                font-weight: 700;
-                font-variation-settings: "wght" 700;
+            a{
+                padding-right: 16px;
+                h2{
+                    font-size: rem-calc(18);
+                    font-weight: 700;
+                    font-variation-settings: "wght" 700;
+    
+                    @include lg{
+                        font-size: rem-calc(25);
+                    }
+                }
+    
+                p{
+                    font-size: rem-calc(16);
+                    font-weight: 600;
+                    font-variation-settings: "wght" 600;
+                }
             }
-
-            p{
-                font-size: rem-calc(16);
-                font-weight: 600;
-                font-variation-settings: "wght" 600;
-            }
+            
         }
 
         #hero-sub-2{
             background-color: $yellow;
             @include xl{
-                grid-template-columns:  16px 480px auto;
+                grid-template-columns:  0px 496px auto;
             }
 
-
-            p{
-                font-size: rem-calc(16);
-                font-variation-settings: "wght" 400;
-                margin-bottom: 5px;
-                span{
-                    font-variation-settings: "wght" 700;
+            a{
+                padding-left: 16px;
+                p{
+                    font-size: rem-calc(16);
+                    font-variation-settings: "wght" 400;
+                    margin-bottom: 5px;
+                    span{
+                        font-variation-settings: "wght" 700;
+                    }
                 }
             }
+
+
+            
         }
     }
 }

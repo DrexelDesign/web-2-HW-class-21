@@ -4,102 +4,138 @@
 #new {
     margin: 24px 0;
 
-    @include md{
+    @include md {
         margin: 32px 0;
         display: grid;
         grid-template-columns: 16px auto 16px;
         grid-template-areas: ". new .";
     }
 
-    @include xl{
+    @include xl {
         margin: 64px 0;
         grid-template-columns: auto 1200px auto;
     }
 
-    >div{
+    >div {
 
-        @include md{
+        @include md {
             grid-area: new;
         }
 
-        #new-title{
+        #new-title {
             font-size: rem-calc(20);
-            font-variation-settings: "wght" 300;
+            font-variation-settings: "wght"300;
             padding: 0px 16px 24px;
         }
 
         ul {
+            display: grid;
+            gap: 16px;
 
 
-            @include md{
-                display: grid;
+            @include md {
+
                 grid-template-columns: repeat(4, 1fr);
-                grid-template-areas: 
-                "n1 n1 n2 n2"
-                "n3 n3 n4 n4"
-                ". n5 n5 .";
-                gap:16px;
+                grid-template-areas:
+                    "n1 n1 n2 n2"
+                    "n3 n3 n4 n4"
+                    ". n5 n5 .";
             }
 
-            @include lg{
+            @include lg {
                 grid-template-columns: repeat(6, 1fr);
-                grid-template-areas: 
-                "n1 n1  n2 n2 n3 n3"
-                ". n4 n4 n5 n5 .";
+                grid-template-areas:
+                    "n1 n1  n2 n2 n3 n3"
+                    ". n4 n4 n5 n5 .";
             }
 
             li {
                 background-color: $greyLight;
+                height: 100%;
+                display: flex;
+                flex-flow: column;
+                height: 100%;
+
                 img {
                     width: 100%;
                 }
-    
-                section {
-                    display: grid;
-                    grid-template-columns: 16px auto 16px;
-                    grid-template-areas: ". new-content .";
-                    padding: 16px 0;
-    
-                    >div {
-                        grid-area: new-content;
 
-                        button{
-                            margin-top: 24px;
+                .new-container {
+                    flex-grow: 1;
+                    padding: 16px;
+
+                    >div {
+
+                        display: flex;
+                        flex-flow: column;
+                        height: 100%;
+
+                        article {
+                            margin-bottom: 16px;
+
+                            h1 {
+                                font-size: rem-calc(23);
+                                font-variation-settings: "wght"700;
+                                margin-bottom: 8px;
+
+                                @include md{
+                                    font-size: rem-calc(25);
+                                }
+
+                                @include md{
+                                    font-size: rem-calc(27);
+                                }
+                            }
+
+                            p {
+                                font-variation-settings: "wght"400;
+                                line-height: rem-calc(20);
+
+                            }
+                        }
+
+                        aside {
+
+                            flex-grow: 1;
+                            display: flex;
+                            align-items: flex-end;
+
+                            button {}
                         }
                     }
                 }
             }
 
-            #n1{
-                @include md{
+            #n1 {
+                @include md {
                     grid-area: n1;
                 }
             }
 
-            #n2{
-                @include md{
+            #n2 {
+                @include md {
                     grid-area: n2;
                 }
             }
 
-            #n3{
-                @include md{
+            #n3 {
+                @include md {
                     grid-area: n3;
                 }
             }
 
-            #n4{
-                @include md{
+            #n4 {
+                @include md {
                     grid-area: n4;
                 }
             }
 
-            #n5{
-                @include md{
+            #n5 {
+                @include md {
                     grid-area: n5;
                 }
             }
         }
     }
-    
+
 }

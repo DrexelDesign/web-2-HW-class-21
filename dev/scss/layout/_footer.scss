@@ -37,10 +37,13 @@ footer {
                 "locations sing-up follow";
         }
 
-        section {
-            // border: 1px solid thistle;
-
-            
+        .footer-section {
+            padding-bottom: 24px;
+            h1 {
+                font-size: rem-calc(20);
+                font-variation-settings: "wght"600;
+                margin-bottom: 16px;
+            }
         }
 
         #locations {
@@ -48,32 +51,56 @@ footer {
                 grid-area: locations;
             }
 
-            ul {
-                li {
-                    display: flex;
-                    margin-bottom: 24px;
+            section {
+                border-bottom: 1px solid $white;
+                padding-bottom: 16px;
+                margin-bottom: 16px;
 
-                    i {
-                        color: $yellow;
-                        margin-right: 10px;
-                    }
+                h2 {
+                    font-size: rem-calc(16);
+                    font-variation-settings: "wght"600;
+                    margin-bottom: 8px;
+                }
 
-                    div {
+                ul {
+                    li {
                         display: flex;
-                        align-items: center;
-                    }
+                        font-size: rem-calc(14);
+                        font-variation-settings: "wght"400;
+                        margin-bottom: 8px;
 
-                    a:link,
-                    a:visited {
-                        color: $white;
 
-                        &:hover,
-                        &:active {
+
+                        i {
                             color: $yellow;
+                            margin-right: 10px;
+                        }
+
+                        div {
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        a:link,
+                        a:visited {
+                            color: $white;
+
+                            &:hover,
+                            &:active {
+                                color: $yellow;
+                            }
                         }
                     }
                 }
+
+                &:last-child{
+                    border:none;
+                    padding-bottom: 0px;
+                margin-bottom: 0px;
+                }
             }
+
+
         }
 
         #sign-up {
@@ -83,13 +110,14 @@ footer {
 
             form {
                 input {
-                    background-color: $stoneSilver;
+                    background-color: $blueLight;
                     border: none;
                     color: $blueDark;
                     padding: 16px 2%;
                     width: 96%;
                     border-radius: 0;
-                    ;
+                    font-variation-settings: "wght"400;
+                    
 
 
                     &::placeholder {
@@ -124,18 +152,18 @@ footer {
                 grid-area: follow;
             }
 
-            @include xl{
+            @include xl {
                 text-align: right;
             }
 
             ul {
                 display: flex;
-                margin-top: 16px;
-                justify-content: flex-end;
+                // margin-top: 16px;
+                // justify-content: flex-end;
 
 
                 li {
-                    margin: 0 16px;
+                    margin-right: 16px;
 
                     @include md {
                         margin: 0 8px;

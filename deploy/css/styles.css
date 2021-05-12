@@ -455,31 +455,56 @@ footer > div {
     grid-template-areas: "locations sing-up follow";
   }
 }
+footer > div .footer-section {
+  padding-bottom: 24px;
+}
+footer > div .footer-section h1 {
+  font-size: 1.25rem;
+  font-variation-settings: "wght" 600;
+  margin-bottom: 16px;
+}
 @media (min-width: 768px) {
   footer > div #locations {
     grid-area: locations;
   }
 }
-footer > div #locations ul li {
-  display: flex;
-  margin-bottom: 24px;
+footer > div #locations section {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
-footer > div #locations ul li i {
+footer > div #locations section h2 {
+  font-size: 1rem;
+  font-variation-settings: "wght" 600;
+  margin-bottom: 8px;
+}
+footer > div #locations section ul li {
+  display: flex;
+  font-size: 0.875rem;
+  font-variation-settings: "wght" 400;
+  margin-bottom: 8px;
+}
+footer > div #locations section ul li i {
   color: #FFD205;
   margin-right: 10px;
 }
-footer > div #locations ul li div {
+footer > div #locations section ul li div {
   display: flex;
   align-items: center;
 }
-footer > div #locations ul li a:link,
-footer > div #locations ul li a:visited {
+footer > div #locations section ul li a:link,
+footer > div #locations section ul li a:visited {
   color: #fff;
 }
-footer > div #locations ul li a:link:hover, footer > div #locations ul li a:link:active,
-footer > div #locations ul li a:visited:hover,
-footer > div #locations ul li a:visited:active {
+footer > div #locations section ul li a:link:hover, footer > div #locations section ul li a:link:active,
+footer > div #locations section ul li a:visited:hover,
+footer > div #locations section ul li a:visited:active {
   color: #FFD205;
+}
+footer > div #locations section:last-child {
+  border: none;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 @media (min-width: 768px) {
   footer > div #sign-up {
@@ -487,12 +512,13 @@ footer > div #locations ul li a:visited:active {
   }
 }
 footer > div #sign-up form input {
-  background-color: #93A8AC;
+  background-color: #ADB5BD;
   border: none;
   color: #2A3036;
   padding: 16px 2%;
   width: 96%;
   border-radius: 0;
+  font-variation-settings: "wght" 400;
 }
 footer > div #sign-up form input::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -525,11 +551,9 @@ footer > div #sign-up form button {
 }
 footer > div #follow ul {
   display: flex;
-  margin-top: 16px;
-  justify-content: flex-end;
 }
 footer > div #follow ul li {
-  margin: 0 16px;
+  margin-right: 16px;
 }
 @media (min-width: 768px) {
   footer > div #follow ul li {
@@ -578,7 +602,7 @@ footer > div #follow ul li a:visited:active {
   border: none;
   border-bottom: 1px solid #93A8AC;
   font-weight: 400;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   border-radius: 0px;
   width: 100%;
 }
@@ -586,22 +610,26 @@ footer > div #follow ul li a:visited:active {
   #search > div form input {
     font-size: 1.875rem;
     font-weight: 300;
+    font-variation-settings: "wght" 400;
     color: #93A8AC;
   }
-  #search > div form input::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #93A8AC;
-    /* Firefox */
-    opacity: 1;
-  }
-  #search > div form input:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: #93A8AC;
-  }
-  #search > div form input::-ms-input-placeholder {
-    /* Microsoft Edge */
-    color: #93A8AC;
-  }
+}
+#search > div form input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #93A8AC;
+  font-variation-settings: "wght" 400;
+  /* Firefox */
+  opacity: 1;
+}
+#search > div form input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #93A8AC;
+  font-variation-settings: "wght" 400;
+}
+#search > div form input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #93A8AC;
+  font-variation-settings: "wght" 400;
 }
 #search > div form button {
   margin-left: auto;
@@ -904,12 +932,14 @@ footer > div #follow ul li a:visited:active {
   font-variation-settings: "wght" 300;
   padding: 0px 16px 24px;
 }
+#new > div ul {
+  display: grid;
+  gap: 16px;
+}
 @media (min-width: 768px) {
   #new > div ul {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "n1 n1 n2 n2" "n3 n3 n4 n4" ". n5 n5 .";
-    gap: 16px;
   }
 }
 @media (min-width: 1024px) {
@@ -920,21 +950,49 @@ footer > div #follow ul li a:visited:active {
 }
 #new > div ul li {
   background-color: #F8F9FA;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
 }
 #new > div ul li img {
   width: 100%;
 }
-#new > div ul li section {
-  display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". new-content .";
-  padding: 16px 0;
+#new > div ul li .new-container {
+  flex-grow: 1;
+  padding: 16px;
 }
-#new > div ul li section > div {
-  grid-area: new-content;
+#new > div ul li .new-container > div {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
 }
-#new > div ul li section > div button {
-  margin-top: 24px;
+#new > div ul li .new-container > div article {
+  margin-bottom: 16px;
+}
+#new > div ul li .new-container > div article h1 {
+  font-size: 1.4375rem;
+  font-variation-settings: "wght" 700;
+  margin-bottom: 8px;
+}
+@media (min-width: 768px) {
+  #new > div ul li .new-container > div article h1 {
+    font-size: 1.5625rem;
+  }
+}
+@media (min-width: 768px) {
+  #new > div ul li .new-container > div article h1 {
+    font-size: 1.6875rem;
+  }
+}
+#new > div ul li .new-container > div article p {
+  font-variation-settings: "wght" 400;
+  line-height: 1.25rem;
+}
+#new > div ul li .new-container > div aside {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
 }
 @media (min-width: 768px) {
   #new > div ul #n1 {

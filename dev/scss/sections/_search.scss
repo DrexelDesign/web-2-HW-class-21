@@ -41,39 +41,38 @@
                 border: none;
                 border-bottom: 1px solid $stoneSilver;
                 font-weight: 400;
-                font-size: rem-calc(18);
+                font-size: rem-calc(20);
                 border-radius: 0px;
                 width: 100%;
-                // border: 1px solid red;
-
     
                 @include md{
-
                     // 16px = 1em;
-
                     // 1em = 1rem;
-
                     // font-size: 30px;
                     font-size: rem-calc(30);
                     font-weight: 300;
+                    font-variation-settings: "wght"400;
                     color: $stoneSilver;
+                }
 
-                    &::placeholder {
-                        /* Chrome, Firefox, Opera, Safari 10.1+ */
-                        color: $stoneSilver;
-                        /* Firefox */
-                        opacity: 1;
-                    }
-    
-                    &:-ms-input-placeholder {
-                        /* Internet Explorer 10-11 */
-                        color: $stoneSilver;
-                    }
-    
-                    &::-ms-input-placeholder {
-                        /* Microsoft Edge */
-                        color: $stoneSilver;
-                    }
+                &::placeholder {
+                    /* Chrome, Firefox, Opera, Safari 10.1+ */
+                    color: $stoneSilver;
+                    font-variation-settings: "wght"400;
+                    /* Firefox */
+                    opacity: 1;
+                }
+
+                &:-ms-input-placeholder {
+                    /* Internet Explorer 10-11 */
+                    color: $stoneSilver;
+                    font-variation-settings: "wght"400;
+                }
+
+                &::-ms-input-placeholder {
+                    /* Microsoft Edge */
+                    color: $stoneSilver;
+                    font-variation-settings: "wght"400;
                 }
 
             }

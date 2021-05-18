@@ -1,18 +1,113 @@
+
+// header{
+//     display: grid;
+//     grid-template-columns: 16px auto 16px;
+//     grid-template-areas: ". header .";
+//     background-color: $blueDark;
+//     padding: 21px 0;
+
+//     @include md{
+//         padding: 24px 0;
+//     }
+
+//     >div{
+//         grid-area: header;
+//     }
+// }
+
+
+
 /* =============
     Header
 ============= */
-header{
-    display: grid;
-    grid-template-columns: 16px auto 16px;
-    grid-template-areas: ". header .";
+header {
     background-color: $blueDark;
-    padding: 21px 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    // display: grid;
+    // grid-template-columns: 16px auto 16px;
+    // grid-template-areas: ". header .";
+    // padding: 21px 0;
+
 
     @include md{
         padding: 24px 0;
     }
 
-    >div{
+    @include lg{
+        padding: 16px 0;
+    }
+
+    >div {
+        display: grid;
+        grid-template-areas: 
+        "logo burger"
+        "nav nav";
+        grid-template-columns: 20% auto;
         grid-area: header;
+        // border: 1px solid red;
+
+        @include lg {
+            grid-template-areas: "logo nav";
+            grid-template-columns: 20% auto;
+        }
+
+        // @include xl{
+        //     grid-area: header;
+        // }
+
+        #logo-container {
+            grid-area: logo;
+            padding: 10px;
+            // border: 1px solid green;
+
+           a:link, a:visited {
+                transition: 0.25s;
+
+                &:hover {
+                }
+            }
+
+            
+        }
+
+        #burger-container {
+            align-items: center;
+            display: flex;
+            grid-area: burger;
+            padding: 10px;
+
+            @include lg {
+                display: none !important;
+            }
+
+            i {
+                margin-left: auto;
+                cursor: pointer;
+                font-size: rem-calc(30);
+                color: $white;
+            }
+        }
+
+        #nav-container {
+            // border: 1px solid blue;
+            background-color: $blueReallyDark;
+            display: none;
+            grid-area: nav;
+            padding: 20px 10px 10px;
+            // height: 100vh;
+
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+
+
+            @include lg {
+                background-color: $blueDark;
+                display: block !important;
+            }
+        }
     }
 }

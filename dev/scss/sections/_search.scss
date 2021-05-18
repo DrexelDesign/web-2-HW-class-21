@@ -7,9 +7,19 @@
 	grid-template-areas: ". search .";
 	grid-template-columns: 16px auto 16px;
 	padding: 18px 0;
+	margin-top: 75px;
+
+
 	@include md {
 		padding: 22px 0;
+		margin-top: 120px;
 	}
+
+	@include lg {
+		margin-top: 125px;
+	}
+
+
 	@include xl {
 		grid-template-columns: auto 1000px auto;
 	}
